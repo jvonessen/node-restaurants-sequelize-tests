@@ -4,7 +4,7 @@ const env = process.env.NODE_ENV || 'development'
 const DATABASE_URL = (
   process.env.DATABASE_URL ||
   global.DATABASE_URL ||
-  'postgres://localhost/dev-restaurants-app'
+  'postgres://localhost/dev-restaurants-sequelize'
 );
 
 const TEST_DATABASE_URL = (
@@ -20,4 +20,3 @@ module.exports = {
     // see http://docs.sequelizejs.com/en/latest/api/sequelize/#new-sequelizedatabase-usernamenull-passwordnull-options
     SEQUELIZE_OPTIONS: {logging: env === 'test' ? false : console.log}
 };
-
